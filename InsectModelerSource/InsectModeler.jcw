@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>InsectModeler</label>
+	</settings>
+	<users>
+		<user>
+			<path>InsectModeler.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>InsectModeler.jcp</path>
+		</project>
+	</projects>
+</workspace>

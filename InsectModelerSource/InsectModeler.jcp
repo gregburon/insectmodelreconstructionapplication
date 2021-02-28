@@ -1,0 +1,98 @@
+<?xml?>
+<project>
+	<settings>
+		<label>InsectModeler</label>
+		<root_path>\</root_path>
+		<output_path>C:\Documents and Settings\greg\Desktop\stuff\laptop stuff\Java\InsectModeler\classes\</output_path>
+		<source_path>\</source_path>
+		<jdkprofile_ref>Java</jdkprofile_ref>
+		<compiler_ref>jikes compiler with vtk</compiler_ref>
+		<ant_ref/>
+	</settings>
+	<runtimes>
+		<runtime>
+			<label>&lt;Default&gt;</label>
+			<application_ref>Java runtime settings</application_ref>
+			<applet_ref>&lt;Default&gt;</applet_ref>
+			<debugger_ref>&lt;Default&gt;</debugger_ref>
+			<param/>
+			<run>myprojects.insectmodeler.InsectModeler</run>
+		</runtime>
+		<runtime>
+			<label>Debug Application</label>
+			<application_ref>Debug Insect Modeler</application_ref>
+			<applet_ref>&lt;Default&gt;</applet_ref>
+			<debugger_ref>&lt;Default&gt;</debugger_ref>
+			<param/>
+			<run>myprojects.insectmodeler.InsectModeler</run>
+		</runtime>
+	</runtimes>
+	<libraries>
+		<library_ref>vtk path</library_ref>
+	</libraries>
+	<files>
+		<include>
+			<fileitem>
+				<path>AddImageDialog.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>CameraPanel.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>ControlsPanel.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>ControlsPanelDialog.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>CreateModelDialog.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>DestroyModelDialog.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>GraphicsEngine.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>ImageRecord.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>InsectBody.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>InsectLeg.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>InsectModel.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>InsectModeler.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>ModelerMenu.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>TextureDialog.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>vtkPanel.java</path>
+				<source>true</source>
+			</fileitem>
+		</include>
+	</files>
+	<tasks/>
+</project>

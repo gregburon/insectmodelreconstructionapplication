@@ -1,0 +1,173 @@
+//////////////////////////////////////////////// cameraPanel
+
+	private JSpinner panSpinner;
+	private JSpinner tiltSpinner;
+	private JSpinner rollSpinner;
+	private JSpinner distanceSpinner;
+
+
+		orbitLabel    = new JLabel( " Camera Orbit Controls:" );
+		panLabel      = new JLabel( " Pan: " );
+		tiltLabel     = new JLabel( " Tilt: " );
+		rollLabel     = new JLabel( " Roll: " );
+		distanceLabel = new JLabel( " Distance: " );
+
+
+
+		SpinnerNumberModel panModel = 
+		   new SpinnerNumberModel( 0.0, -360, 360, 0.1 );
+		SpinnerNumberModel tiltModel = 
+		   new SpinnerNumberModel( 0.0, -360, 360, 0.1 );
+		SpinnerNumberModel rollModel = 
+		   new SpinnerNumberModel( 0.0, -360, 360, 0.1 ); 
+		SpinnerNumberModel distanceModel = 
+		   new SpinnerNumberModel( 0.0, -10000.0, 10000.0, 0.1 ); 	
+
+		panSpinner      = new JSpinner( panModel );
+		tiltSpinner     = new JSpinner( tiltModel );
+		rollSpinner     = new JSpinner( rollModel );
+		distanceSpinner = new JSpinner( distanceModel );
+
+		panSpinner.setPreferredSize( dim );
+		tiltSpinner.setPreferredSize( dim );
+		rollSpinner.setPreferredSize( dim );
+		distanceSpinner.setPreferredSize( dim );
+
+		orbitLabel.setPreferredSize( labelDim );
+		panLabel.setPreferredSize( labelDim );
+		tiltLabel.setPreferredSize( labelDim );
+		rollLabel.setPreferredSize( labelDim );
+		distanceLabel.setPreferredSize( labelDim );	
+
+//		gridBagConstraints.gridwidth = 4;
+//		gridBagConstraints.ipadx     = 10;
+//		gridBagConstraints.ipady     = 10;
+//		gridBagConstraints.weightx   = 0.5;
+//		gridBagConstraints.gridx     = 0;
+//		gridBagConstraints.gridy     = 5;
+//		gridBagLayout.setConstraints( orbitLabel, gridBagConstraints );
+//		this.add( orbitLabel );			
+//			
+//		gridBagConstraints.gridwidth = 1;
+//		gridBagConstraints.ipadx     = 10;
+//		gridBagConstraints.ipady     = 10;
+//		gridBagConstraints.weightx   = 0.5;
+//		gridBagConstraints.gridx     = 0;
+//		gridBagConstraints.gridy     = 6;
+//		gridBagLayout.setConstraints( panLabel, gridBagConstraints );
+//		this.add( panLabel );	
+//						
+//		gridBagConstraints.gridwidth = 1;
+//		gridBagConstraints.ipadx     = 10;
+//		gridBagConstraints.ipady     = 10;
+//		gridBagConstraints.weightx   = 0.5;
+//		gridBagConstraints.gridx     = 1;
+//		gridBagConstraints.gridy     = 6;
+//		gridBagLayout.setConstraints( panSpinner, gridBagConstraints );
+//		this.add( panSpinner );													
+//
+//		gridBagConstraints.gridwidth = 1;
+//		gridBagConstraints.ipadx     = 10;
+//		gridBagConstraints.ipady     = 10;
+//		gridBagConstraints.weightx   = 0.5;
+//		gridBagConstraints.gridx     = 2;
+//		gridBagConstraints.gridy     = 6;
+//		gridBagLayout.setConstraints( tiltLabel, gridBagConstraints );
+//		this.add( tiltLabel );
+//		
+//		gridBagConstraints.gridwidth = 1;
+//		gridBagConstraints.ipadx     = 10;
+//		gridBagConstraints.ipady     = 10;
+//		gridBagConstraints.weightx   = 0.5;
+//		gridBagConstraints.gridx     = 3;
+//		gridBagConstraints.gridy     = 6;
+//		gridBagLayout.setConstraints( tiltSpinner, gridBagConstraints );
+//		this.add( tiltSpinner );	
+//	
+//		gridBagConstraints.gridwidth = 1;
+//		gridBagConstraints.ipadx     = 10;
+//		gridBagConstraints.ipady     = 10;
+//		gridBagConstraints.weightx   = 0.5;
+//		gridBagConstraints.gridx     = 0;
+//		gridBagConstraints.gridy     = 7;
+//		gridBagLayout.setConstraints( rollLabel, gridBagConstraints );
+//		this.add( rollLabel );	
+//				
+//		gridBagConstraints.gridwidth = 1;
+//		gridBagConstraints.ipadx     = 10;
+//		gridBagConstraints.ipady     = 10;
+//		gridBagConstraints.weightx   = 0.5;
+//		gridBagConstraints.gridx     = 1;
+//		gridBagConstraints.gridy     = 7;
+//		gridBagLayout.setConstraints( rollSpinner, gridBagConstraints );
+//		this.add( rollSpinner );													
+//
+//		gridBagConstraints.gridwidth = 1;
+//		gridBagConstraints.ipadx     = 10;
+//		gridBagConstraints.ipady     = 10;
+//		gridBagConstraints.weightx   = 0.5;
+//		gridBagConstraints.gridx     = 2;
+//		gridBagConstraints.gridy     = 7;
+//		gridBagLayout.setConstraints( distanceLabel, gridBagConstraints );
+//		this.add( distanceLabel );
+//		
+//		gridBagConstraints.gridwidth = 1;
+//		gridBagConstraints.ipadx     = 10;
+//		gridBagConstraints.ipady     = 10;
+//		gridBagConstraints.weightx   = 0.5;
+//		gridBagConstraints.gridx     = 3;
+//		gridBagConstraints.gridy     = 7;
+//		gridBagLayout.setConstraints( distanceSpinner, gridBagConstraints );
+//		this.add( distanceSpinner );	
+
+
+	public void addCameraOrbitListener( ChangeListener listener )
+	{
+		panSpinner.addChangeListener( listener );
+		tiltSpinner.addChangeListener( listener );
+		rollSpinner.addChangeListener( listener );
+		distanceSpinner.addChangeListener( listener );	
+	}
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////// controlsPanel
+
+
+	public void addCameraOrbitListener( ChangeListener listener )
+	{
+		cameraPanel.addCameraOrbitListener( listener );
+	}
+
+
+
+//////////////////////////////////////////////// InsectModeler
+
+
+controlsPanel.addCameraOrbitListener( new CameraOrbitListener( ) );
+
+
+	public class CameraOrbitListener implements ChangeListener
+	// The CameraOrbitListener is a listener for the camera orbit spinner 
+	// controls.  Any time one of the camera orbit spinners is modified by the
+	// user, either by clicking arrows or by changing the number in the edit 
+	// field, this listener is sent a  message.  Get the pan, tilt, roll, and 
+	// distance information from the spinners and update the camera with the 
+	// new values.  Also update the position spinners due to any changes that
+	// modifying the orbit values may have caused.
+	{
+		public void stateChanged( ChangeEvent event )
+		{
+			if( dragging == false )
+			{
+				System.out.println( "The orbiter hears you spinning..." );
+
+			}// end if
+			
+		}// end stateChanged	
+	}
